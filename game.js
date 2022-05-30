@@ -16,11 +16,11 @@ function RPS() {
         }
       } else if (userMove == "Paper") {
         if (computerMove == "Rock") {
-          
-        } else if (computerMove == "Paper") {
-          console.log("It's a tie!");
-        } else {
-          
+            console.log("You win! Paper beats Rock")
+          } else if (computerMove == "Paper") {
+            console.log("It's a tie!");
+          } else {
+            console.log("You lose! Scissors beat Paper")
         }
       } else {
         if (computerMove == "Rock") {
