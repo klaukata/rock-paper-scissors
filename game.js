@@ -6,4 +6,29 @@ function computer() {
 function RPS() {
     let userMove = prompt("?").toUpperCase();
     let computerMove = computer().toUpperCase();
+    if (computerMove == "Rock") {
+        if (userMove == "Rock") {
+          
+        } else if (userMove == "Paper") {
+          
+        } else {
+          
+        }
+      } else if (computerMove == "Paper") {
+        if (userMove == "Rock") {
+          
+        } else if (userMove == "Paper") {
+          
+        } else {
+          
+        }
+      } else {
+        if (userMove == "Rock") {
+          
+        } else if (userMove == "Paper") {
+          
+        } else {
+          
+        }
+      }
 }
