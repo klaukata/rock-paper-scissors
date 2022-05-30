@@ -6,26 +6,26 @@ function computer() {
 function RPS() {
     let userMove = prompt("?").toUpperCase();
     let computerMove = computer().toUpperCase();
-    if (computerMove == "Rock") {
-        if (userMove == "Rock") {
+    if (userMove == "Rock") {
+        if (computerMove == "Rock") {
           console.log("It's a tie!");
-        } else if (userMove == "Paper") {
+        } else if (computerMove == "Paper") {
           
         } else {
           
         }
-      } else if (computerMove == "Paper") {
-        if (userMove == "Rock") {
+      } else if (userMove == "Paper") {
+        if (computerMove == "Rock") {
           
-        } else if (userMove == "Paper") {
+        } else if (computerMove == "Paper") {
           console.log("It's a tie!");
         } else {
           
         }
       } else {
-        if (userMove == "Rock") {
+        if (computerMove == "Rock") {
           
-        } else if (userMove == "Paper") {
+        } else if (computerMove == "Paper") {
           
         } else {
           console.log("It's a tie!");
