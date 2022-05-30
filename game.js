@@ -8,11 +8,11 @@ function RPS() {
     let computerMove = computer().toUpperCase();
     if (userMove == "Rock") {
         if (computerMove == "Rock") {
-          console.log("It's a tie!");
-        } else if (computerMove == "Paper") {
-          
-        } else {
-          
+            console.log("It's a tie!");
+          } else if (computerMove == "Paper") {
+            console.log("You lose! Paper beats Rock")
+          } else {
+            console.log("You win! Rock beats Scissors")
         }
       } else if (userMove == "Paper") {
         if (computerMove == "Rock") {
