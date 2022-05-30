@@ -14,7 +14,8 @@ function RPS() {
           } else {
             console.log("You win! Rock beats Scissors")
         }
-      } else if (userMove == "Paper") {
+      } 
+      else if (userMove == "Paper") {
         if (computerMove == "Rock") {
             console.log("You win! Paper beats Rock")
           } else if (computerMove == "Paper") {
@@ -22,13 +23,14 @@ function RPS() {
           } else {
             console.log("You lose! Scissors beat Paper")
         }
-      } else {
+      } 
+      else {
         if (computerMove == "Rock") {
-          
-        } else if (computerMove == "Paper") {
-          
-        } else {
-          console.log("It's a tie!");
+            console.log("You lose! Rock beats Scissors")
+          } else if (computerMove == "Paper") {
+            console.log("You win! Scissors beat Paper")
+          } else {
+            console.log("It's a tie!");
         }
       }
 }
