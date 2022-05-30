@@ -8,7 +8,7 @@ function RPS() {
     let computerMove = computer().toUpperCase();
     if (computerMove == "Rock") {
         if (userMove == "Rock") {
-          
+          console.log("It's a tie!");
         } else if (userMove == "Paper") {
           
         } else {
@@ -18,7 +18,7 @@ function RPS() {
         if (userMove == "Rock") {
           
         } else if (userMove == "Paper") {
-          
+          console.log("It's a tie!");
         } else {
           
         }
@@ -28,7 +28,7 @@ function RPS() {
         } else if (userMove == "Paper") {
           
         } else {
-          
+          console.log("It's a tie!");
         }
       }
 }
