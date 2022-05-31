@@ -8,27 +8,36 @@ let userMove = "PAPER" //prompt("?").toUpperCase();
 function RPS(usr, comp) {
   if (usr == "ROCK") {
       if (comp == "ROCK") {
+        console.log("It's a tie!");
         return "It's a tie!"
       } else if (comp == "PAPER") {
+        console.log("You lose! Paper beats Rock");
         return "You lose! Paper beats Rock"
       } else {
+        console.log("You win! Rock beats Scissors");
         return "You win! Rock beats Scissors"
       }
     } else if (usr == "PAPER") {
       if (comp == "ROCK") {
+        console.log("You win! Paper beats Rock");
         return "You win! Paper beats Rock"
       } else if (comp == "PAPER") {
-        return "It's a tie!";
+        console.log("It's a tie!");
+        return "It's a tie!"
       } else {
+        console.log("You lose! Scissors beat Paper");
         return "You lose! Scissors beat Paper"
       }
     } else if (usr == "SCISSORS") {
       if (comp == "ROCK") {
+        console.log("You lose! Rock beats Scissors");
         return "You lose! Rock beats Scissors"
       } else if (comp == "PAPER") {
+        console.log("You win! Scissors beat Paper");
         return "You win! Scissors beat Paper"
       } else {
-        return "It's a tie!";
+        console.log("It's a tie!");
+        return "It's a tie!"
       }
     } else {
       return "Error babe :/"
