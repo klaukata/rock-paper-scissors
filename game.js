@@ -2,7 +2,7 @@ function computer() {
   let move = Math.floor(Math.random() * 3) + 1;
   return (move == 3) ? "Rock" : (move == 2) ? "Paper" : "Scissors"
 }
-let userMove = "PAPER" //prompt("?").toUpperCase();
+let userMove = prompt("?").toUpperCase();
 let computerMove = computer().toUpperCase();
 
 function RPS(usr, comp) {
