@@ -50,6 +50,7 @@ function game() {
   let roundsNum = 5;
   for (let x = 1; x <= roundsNum; x++) {
     let result = RPS(prompt("What do you pick?").toUpperCase(), computer().toUpperCase());
+    alert(result);
     if (result.includes("You win!")) {
       userScore++
     } else if (result.includes("You lose!")) {
