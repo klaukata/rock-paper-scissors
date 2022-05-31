@@ -5,8 +5,6 @@ function computer() {
   return (move == 3) ? "Rock" : (move == 2) ? "Paper" : "Scissors"
 }
 
-let userMove = prompt("What do you pick?").toUpperCase();
-
 function RPS(usr, comp) {
   if (usr == "ROCK") {
       if (comp == "ROCK") {
@@ -51,7 +49,7 @@ function game() {
   let computerScore = 0;
   let roundsNum = 5;
   for (let x = 1; x <= roundsNum; x++) {
-    let result = RPS(userMove, computer().toUpperCase());
+    let result = RPS(prompt("What do you pick?").toUpperCase(), computer().toUpperCase());
     if (result.includes("You win!")) {
       userScore++
     } else if (result.includes("You lose!")) {
