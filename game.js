@@ -36,5 +36,8 @@ function RPS(usr, comp) {
 }
 
 function game() {
-  
+  let roundsNum = parseInt(prompt("?"));
+  if (isNaN(roundsNum)) {
+    return "Input is not a number. Please try again"
+  }
 }
