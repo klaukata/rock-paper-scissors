@@ -1,4 +1,5 @@
 console.log("------ROCK-PAPER-SCISSORS------")
+console.log("type 'game()' to start!")
 
 function computer() {
   let move = Math.floor(Math.random() * 3) + 1;
