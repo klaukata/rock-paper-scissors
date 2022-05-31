@@ -38,10 +38,7 @@ function RPS(usr, comp) {
 function game() {
   let userScore = 0;
   let computerScore = 0;
-  let roundsNum = parseInt("3"); //??????????????
-  if (isNaN(roundsNum)) {
-    return "Input is not a number. Please try again"
-  }
+  let roundsNum = 5;
   for (let x = 1; x <= roundsNum; x++) {
     let result = RPS(userMove, computer().toUpperCase());
     if (result.includes("You win!")) {
