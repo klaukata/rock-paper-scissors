@@ -36,11 +36,20 @@ function RPS(usr, comp) {
 }
 
 function game() {
-let roundsNum = parseInt("13");
-if (isNaN(roundsNum)) {
-  return "Input is not a number. Please try again"
-}
-for (let x = 1; x <= roundsNum; x++) {
-  console.log(RPS(userMove, computer().toUpperCase()))
-}
+  let userScore = 0;
+  let computerScore = 0;
+  let roundsNum = parseInt("3"); //??????????????
+  if (isNaN(roundsNum)) {
+    return "Input is not a number. Please try again"
+  }
+  for (let x = 1; x <= roundsNum; x++) {
+    let result = RPS(userMove, computer().toUpperCase());
+    if (result.includes("You win!")) {
+      userScore++
+    } else if (result.includes("You lose!")) {
+      computerScore++
+    }
+    console.log(result)
+    console.log(userScore + "       " + computerScore)
+  }
 }
