@@ -2,8 +2,8 @@ function computer() {
   let move = Math.floor(Math.random() * 3) + 1;
   return (move == 3) ? "Rock" : (move == 2) ? "Paper" : "Scissors"
 }
-let userMove = prompt("?").toUpperCase();
-let computerMove = computer().toUpperCase();
+
+let userMove = "PAPER" //prompt("?").toUpperCase();
 
 function RPS(usr, comp) {
   if (usr == "ROCK") {
@@ -36,8 +36,11 @@ function RPS(usr, comp) {
 }
 
 function game() {
-  let roundsNum = parseInt(prompt("?"));
-  if (isNaN(roundsNum)) {
-    return "Input is not a number. Please try again"
-  }
+let roundsNum = parseInt("13");
+if (isNaN(roundsNum)) {
+  return "Input is not a number. Please try again"
+}
+for (let x = 1; x <= roundsNum; x++) {
+  console.log(RPS(userMove, computer().toUpperCase()))
+}
 }
