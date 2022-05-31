@@ -56,6 +56,6 @@ function game() {
       computerScore++
     }
   }
-  let userToComp =  userScore + " to " + computerScore
-  return (userScore > computerScore) ? 'You won! ' + userToComp : (userScore < computerScore) ? 'You lost this one :/ ' + userToComp : "It's a tie"
+  let userToComp =  userScore + " to " + computerScore;
+  return (userScore > computerScore) ? 'You won! ' + userToComp : (userScore < computerScore) ? 'You lost this one :/ ' + userToComp : "It's a tie! " + userToComp
 }
