@@ -22,13 +22,15 @@ function RPS(usr, comp) {
       } else {
         return "You lose! Scissors beat Paper"
       }
-    } else {
+    } else if (usr == "SCISSORS") {
       if (comp == "ROCK") {
         return "You lose! Rock beats Scissors"
       } else if (comp == "PAPER") {
         return "You win! Scissors beat Paper"
       } else {
-        return "It's a tie!333";
+        return "It's a tie!";
       }
+    } else {
+      return "Error babe :/"
   }
 }
