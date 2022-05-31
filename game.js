@@ -5,7 +5,7 @@ function computer() {
   return (move == 3) ? "Rock" : (move == 2) ? "Paper" : "Scissors"
 }
 
-let userMove = "PAPER" //prompt("?").toUpperCase();
+let userMove = prompt("What do you pick?").toUpperCase();
 
 function RPS(usr, comp) {
   if (usr == "ROCK") {
