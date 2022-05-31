@@ -34,3 +34,7 @@ function RPS(usr, comp) {
       return "Error babe :/"
   }
 }
+
+function game() {
+  
+}
