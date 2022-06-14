@@ -1,19 +1,10 @@
-function randomZeroToTwo() { 
+function randomZeroToTwo() { // returns 0, 1 or 2
   return Math.floor(Math.random() * 3);
 }
 
-let usrChoice = 'S', // usr picks an answer 
-    computerChoice = randomZeroToTwo(); // computer picks an answer 
-
-let usrChoiceArr = [0, 0, 0]
-let computerChoiceArr = [0, 0, 0]
-
-function convertChoiceToArr(arr, choice) {
+function convertChoiceToArr(arr, choice) { // changes 0 to 1 depending on a player's & computer's choice
   return (choice === 'R' || choice === 0) ? arr[0] = 1 : (choice === 'P' || choice === 1) ? arr[1] = 1 : arr[2] = 1
 }
-
-convertChoiceToArr(usrChoiceArr, usrChoice) 
-convertChoiceToArr(computerChoiceArr, computerChoice)
 
 const obj = {
   0: 'rock',
@@ -25,14 +16,38 @@ function determinateWhoWonARound(usr, comp) {
   let usrIndex = usr.indexOf(1);
   let compIndex = comp.indexOf(1);
   if ((compIndex + 1 == usrIndex) || (usrIndex === 0 && compIndex === 2)) {
-    if (obj[usrIndex] == 'scissors') return `you won! ${obj[usrIndex]} beat ${obj[compIndex]}`
-    return `you won! ${obj[usrIndex]} beats ${obj[compIndex]}`
+    if (obj[usrIndex] == 'scissors') return `you win! ${obj[usrIndex]} beat ${obj[compIndex]}`
+    return `you win! ${obj[usrIndex]} beats ${obj[compIndex]}`
   } else if (usrIndex == compIndex) {
     return 'a tie'
   } else {
     if (obj[compIndex] == 'scissors') return `you lost! ${obj[compIndex]} beat ${obj[usrIndex]}`
-    return `you lost! ${obj[compIndex]} beats ${obj[usrIndex]}`
+    return `you lose! ${obj[compIndex]} beats ${obj[usrIndex]}`
   }
+}
+
+function game(numOfRounds) {
+  let userScore = 0;
+  let computerScore = 0;
+  for (let x = 1; x <= numOfRounds; x++) {
+    let usrChoice = 'S'; // users pick
+    let computerChoice = randomZeroToTwo(); // computer pick
+    let usrChoiceArr = [0, 0, 0]
+    let computerChoiceArr = [0, 0, 0]
+    convertChoiceToArr(usrChoiceArr, usrChoice) 
+    convertChoiceToArr(computerChoiceArr, computerChoice);
+    let result = determinateWhoWonARound(usrChoiceArr, computerChoiceArr)
+    console.log(result)
+    if (result.includes("you win")) {
+      userScore++
+    } else if (result.includes("you lose")) {
+      computerScore++
+    }
+  }
+  let userToComp =  userScore + " to " + computerScore;
+  return (userScore > computerScore) ? 'You won! ' + userToComp : 
+      (userScore < computerScore) ? 'You lost this one :/ ' + userToComp : 
+      "It's a tie! " + userToComp
 }
 // console.log("------ROCK-PAPER-SCISSORS------")
 // console.log("type 'game()' to start!")
