@@ -2,7 +2,11 @@ function randomZeroToTwo() {
   return Math.floor(Math.random() * 3);
 }
 
+let usrChoice = 'S', // usr picks an answer 
+    computerChoice = randomZeroToTwo(); // computer picks an answer 
 
+let usrChoiceArr = [0, 0, 0]
+let computerChoiceArr = [0, 0, 0]
 
 
 
