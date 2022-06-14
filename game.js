@@ -21,7 +21,17 @@ const obj = {
   2: 'scissors'
 }
 
-
+function determinateWhoWonARound(usr, comp) {
+  let usrIndex = usr.indexOf(1);
+  let compIndex = comp.indexOf(1);
+  if ((compIndex + 1 == usrIndex) || (usrIndex === 0 && compIndex === 2)) {
+    return `you won! ${obj[usrIndex]} beats ${obj[compIndex]}`
+  } else if (usrIndex == compIndex) {
+    return 'a tie'
+  } else {
+    return `you lost! ${obj[compIndex]} beats ${obj[usrIndex]}`
+  }
+}
 // console.log("------ROCK-PAPER-SCISSORS------")
 // console.log("type 'game()' to start!")
 
