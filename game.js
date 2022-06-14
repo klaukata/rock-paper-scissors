@@ -15,6 +15,12 @@ function convertChoiceToArr(arr, choice) {
 convertChoiceToArr(usrChoiceArr, usrChoice) 
 convertChoiceToArr(computerChoiceArr, computerChoice)
 
+const obj = {
+  0: 'rock',
+  1: 'paper',
+  2: 'scissors'
+}
+
 
 // console.log("------ROCK-PAPER-SCISSORS------")
 // console.log("type 'game()' to start!")
