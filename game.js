@@ -1,3 +1,13 @@
+function randomZeroToTwo() { 
+  return Math.floor(Math.random() * 3);
+}
+
+
+
+
+
+
+
 // console.log("------ROCK-PAPER-SCISSORS------")
 // console.log("type 'game()' to start!")
 
