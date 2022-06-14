@@ -12,6 +12,8 @@ function convertChoiceToArr(arr, choice) {
   return (choice === 'R' || choice === 0) ? arr[0] = 1 : (choice === 'P' || choice === 1) ? arr[1] = 1 : arr[2] = 1
 }
 
+convertChoiceToArr(usrChoiceArr, usrChoice) 
+convertChoiceToArr(computerChoiceArr, computerChoice)
 
 
 // console.log("------ROCK-PAPER-SCISSORS------")
