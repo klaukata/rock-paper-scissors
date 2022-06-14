@@ -25,10 +25,12 @@ function determinateWhoWonARound(usr, comp) {
   let usrIndex = usr.indexOf(1);
   let compIndex = comp.indexOf(1);
   if ((compIndex + 1 == usrIndex) || (usrIndex === 0 && compIndex === 2)) {
+    if (obj[usrIndex] == 'scissors') return `you won! ${obj[usrIndex]} beat ${obj[compIndex]}`
     return `you won! ${obj[usrIndex]} beats ${obj[compIndex]}`
   } else if (usrIndex == compIndex) {
     return 'a tie'
   } else {
+    if (obj[compIndex] == 'scissors') return `you lost! ${obj[compIndex]} beat ${obj[usrIndex]}`
     return `you lost! ${obj[compIndex]} beats ${obj[usrIndex]}`
   }
 }
