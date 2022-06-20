@@ -1,0 +1,65 @@
+
+
+.blobs {
+    position: absolute;
+}
+
+#blobGreen {
+    
+    width: 422px;
+    height: 420px;
+    left: -0.34px;
+    top: 0px;
+
+    background: rgba(180, 248, 200, 0.79);
+    filter: blur(150px);
+}
+#blobOrange {
+    width: 563.21px;
+    height: 630.4px;
+    left: -218px;
+    top: 739.81px;
+    
+    background: rgba(237, 148, 84, 0.51);
+    filter: blur(150px);
+    transform: rotate(-13.23deg);
+}
+#blobYellow {
+    width: 492px;
+height: 512px;
+left: 720px;
+top: -74px;
+
+background: #FBE7C6;
+filter: blur(150px);
+}
+#blobPink {
+    width: 386px;
+    height: 423px;
+    left: 421.61px;
+    top: 374px;
+    
+    background: rgba(255, 174, 188, 0.49);
+    filter: blur(200px);
+    transform: rotate(12.23deg);   
+}
+#blobPurple {
+    width: 387.84px;
+    height: 548px;
+    left: 844.29px;
+    top: 1200.07px;
+    
+    background: rgba(230, 197, 216, 0.74);
+    filter: blur(200px);
+    transform: rotate(-116.05deg);    
+}
+#blobBlue {
+    width: 436.3px;
+height: 448.3px;
+left: 1393.43px;
+top: 179px;
+
+background: rgba(160, 231, 229, 0.71);
+filter: blur(150px);
+transform: rotate(46.92deg);
+}
