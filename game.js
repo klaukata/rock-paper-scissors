@@ -1,0 +1,81 @@
+// buttons
+const btnRock = document.getElementById('rockButton');
+const btnPaper = document.getElementById('paperButton');
+const btnScissors = document.getElementById('scissorsButton');
+
+// paragraphs
+const paraUserArr = document.querySelector('p'); // ?
+const paraComputerArr = document.getElementById('pComputerArr') // ?
+const paraOneRoundVerdict = document.getElementById('pOneRoundVerdict');
+
+const arrs = {
+  rock: [1,0,0],
+  paper: [0,1,0],
+  scissors: [0,0,1]
+}
+
+// individual event listeners
+btnRock.addEventListener('click', () => {onClick(arrs.rock)});
+btnPaper.addEventListener('click', () => {onClick(arrs.paper)});
+btnScissors.addEventListener('click', () => {onClick(arrs.scissors)});
+
+// executes when a user clicks a button
+let onClick = function(userPick) {
+  paraUserArr.textContent = userPick; // ?
+  // creates a random computer pick
+  function convertChoiceToArr() { 
+    let randomNum = Math.floor(Math.random() * 3);
+    return (randomNum === 0) ? [1,0,0] : (randomNum === 1) ? [0,1,0] : [0,0,1];
+  }
+  let computerPick = convertChoiceToArr();
+  paraComputerArr.textContent = computerPick; // ?
+  paraOneRoundVerdict.textContent = determineWhoWonARound(userPick, computerPick);
+  console.log(paraOneRoundVerdict.textContent) // ?
+}
+
+const obj = {
+  0: 'rock',
+  1: 'paper',
+  2: 'scissors'
+}
+
+function determineWhoWonARound(usr, comp) {
+  let usrIndex = usr.indexOf(1);
+  let compIndex = comp.indexOf(1);
+  if ((compIndex + 1 == usrIndex) || (usrIndex === 0 && compIndex === 2)) {
+    if (obj[usrIndex] == 'scissors') return `you win! ${obj[usrIndex]} beat ${obj[compIndex]}`
+    return `you win! ${obj[usrIndex]} beats ${obj[compIndex]}`
+  } else if (usrIndex == compIndex) {
+    return "it's a tie!"
+  } else {
+    if (obj[compIndex] == 'scissors') return `you lose! ${obj[compIndex]} beat ${obj[usrIndex]}`
+    return `you lose! ${obj[compIndex]} beats ${obj[usrIndex]}`
+  }
+}
+
+const paraUserScore = document.getElementById('userScore')
+const paraComputerScore = document.getElementById('computerScore')
+
+let userScore = 0;
+let computerScore = 0;
+
+const btns = document.querySelectorAll('.choice');
+const paraFinalScore = document.getElementById('pFinalScore');
+
+//counts the score and determines if user won/lost
+btns.forEach((button) => button.addEventListener('click', () => {
+  if (paraOneRoundVerdict.textContent.includes('you win')) {
+    userScore++;
+    paraUserScore.textContent = `user score: ${userScore}`
+  } else if (paraOneRoundVerdict.textContent.includes('you lose')) {
+    computerScore++;
+    paraComputerScore.textContent = `computer score: ${userScore}`
+  }
+  if (userScore > computerScore) {
+    paraFinalScore.textContent = 'You won!!!'
+  } else if (userScore === computerScore) {
+    paraFinalScore.textContent = 'a tie!!!'
+  } else {
+    paraFinalScore.textContent = 'you lost!!!'
+  } 
+}));
