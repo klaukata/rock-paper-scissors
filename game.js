@@ -6,7 +6,7 @@ const btnScissors = document.getElementById('scissorsButton');
 // paragraphs
 const paraUserArr = document.querySelector('p'); // ?
 const paraComputerArr = document.getElementById('pComputerArr') // ?
-const paraOneRoundVerdict = document.getElementById('pOneRoundVerdict');
+const hOneRoundVerdict = document.getElementById('hOneRoundVerdict');
 
 const arrs = {
   rock: [1,0,0],
@@ -29,8 +29,8 @@ let onClick = function(userPick) {
   }
   let computerPick = convertChoiceToArr();
   paraComputerArr.textContent = computerPick; // ?
-  paraOneRoundVerdict.textContent = determineWhoWonARound(userPick, computerPick);
-  console.log(paraOneRoundVerdict.textContent) // ?
+  hOneRoundVerdict.textContent = determineWhoWonARound(userPick, computerPick);
+  console.log(hOneRoundVerdict.textContent) // ?
 }
 
 const obj = {
@@ -64,10 +64,10 @@ const paraFinalScore = document.getElementById('pFinalScore');
 
 //counts the score and determines if user won/lost
 btns.forEach((button) => button.addEventListener('click', () => {
-  if (paraOneRoundVerdict.textContent.includes('you win')) {
+  if (hOneRoundVerdict.textContent.includes('you win')) {
     userScore++;
     paraUserScore.textContent = `user score: ${userScore}`
-  } else if (paraOneRoundVerdict.textContent.includes('you lose')) {
+  } else if (hOneRoundVerdict.textContent.includes('you lose')) {
     computerScore++;
     paraComputerScore.textContent = `computer score: ${userScore}`
   }
