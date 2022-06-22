@@ -4,7 +4,6 @@ const btnPaper = document.getElementById('paperButton');
 const btnScissors = document.getElementById('scissorsButton');
 
 // paragraphs
-const paraUserArr = document.querySelector('p'); // ?
 const paraComputerArr = document.getElementById('pComputerArr') // ?
 const hOneRoundVerdict = document.getElementById('hOneRoundVerdict');
 
@@ -21,7 +20,6 @@ btnScissors.addEventListener('click', () => {onClick(arrs.scissors)});
 
 // executes when a user clicks a button
 let onClick = function(userPick) {
-  paraUserArr.textContent = userPick; // ?
   // creates a random computer pick
   function convertChoiceToArr() { 
     let randomNum = Math.floor(Math.random() * 3);
@@ -79,3 +77,10 @@ btns.forEach((button) => button.addEventListener('click', () => {
     hFinalScore.textContent = 'you lost!!!'
   } 
 }));
+
+
+//reset button
+//change default messages
+// computer chose
+// how many round to win
+// block buttons when theres a winner
