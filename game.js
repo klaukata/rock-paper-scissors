@@ -26,9 +26,15 @@ let onClick = function(userPick) {
     return (randomNum === 0) ? [1,0,0] : (randomNum === 1) ? [0,1,0] : [0,0,1];
   }
   let computerPick = convertChoiceToArr();
-  paraComputerArr.textContent = computerPick; // ?
+  function getObjectKeyName(arr) {
+    let str = arr.join('');
+    for (let i in arrs) {
+      let objValue = arrs[i].join('');
+      if (objValue == str) return i
+    }
+  }
+  paraComputerArr.textContent = getObjectKeyName(computerPick); // ?
   hOneRoundVerdict.textContent = determineWhoWonARound(userPick, computerPick);
-  console.log(hOneRoundVerdict.textContent) // ?
 }
 
 const obj = {
