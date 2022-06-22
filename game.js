@@ -60,7 +60,7 @@ let userScore = 0;
 let computerScore = 0;
 
 const btns = document.querySelectorAll('.choice');
-const paraFinalScore = document.getElementById('pFinalScore');
+const hFinalScore = document.getElementById('hFinalScore');
 
 //counts the score and determines if user won/lost
 btns.forEach((button) => button.addEventListener('click', () => {
@@ -72,10 +72,10 @@ btns.forEach((button) => button.addEventListener('click', () => {
     paraComputerScore.textContent = `computer score: ${userScore}`
   }
   if (userScore > computerScore) {
-    paraFinalScore.textContent = 'You won!!!'
+    hFinalScore.textContent = 'You won!!!'
   } else if (userScore === computerScore) {
-    paraFinalScore.textContent = 'a tie!!!'
+    hFinalScore.textContent = 'a tie!!!'
   } else {
-    paraFinalScore.textContent = 'you lost!!!'
+    hFinalScore.textContent = 'you lost!!!'
   } 
 }));
