@@ -87,13 +87,17 @@ btns.forEach((button) => button.addEventListener('click', () => {
     hFinalScore.textContent = 'a tie!!!'
   } else {
     hFinalScore.textContent = 'you lost!!!'
-  } 
+  } btnRock.disabled = true;
+    btnPaper.disabled = true;
+    btnScissors.disabled = true;
+    btnReset.disabled = false;
   }
   
 }));
 
 // reset button
 const btnReset = document.getElementById('resetButton');
+btnReset.disabled = true;
 
 btnReset.addEventListener('click', () => {
   paraComputerArr.textContent = 'pick first to find out';
@@ -108,6 +112,5 @@ btnReset.addEventListener('click', () => {
 
 
 
-// how many round to win
 // block buttons when theres a winner
 // user score has different colors
