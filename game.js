@@ -100,6 +100,10 @@ const btnReset = document.getElementById('resetButton');
 btnReset.disabled = true;
 
 btnReset.addEventListener('click', () => {
+  btnRock.disabled = false;
+  btnScissors.disabled = false;
+  btnPaper.disabled = false;
+  btnReset.disabled = true;
   paraComputerArr.textContent = 'pick first to find out';
   hOneRoundVerdict.textContent = 'who will win the first round?'
   userScore = 0;
@@ -111,6 +115,4 @@ btnReset.addEventListener('click', () => {
 })
 
 
-
-// block buttons when theres a winner
 // user score has different colors
