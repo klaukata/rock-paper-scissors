@@ -69,7 +69,9 @@ const btns = document.querySelectorAll('.choice');
 const hFinalScore = document.getElementById('hFinalScore');
 
 //counts the score and determines if user won/lost
+let btnsClick = 0;
 btns.forEach((button) => button.addEventListener('click', () => {
+  btnsClick++;
   if (hOneRoundVerdict.textContent.includes('you win')) {
     userScore++;
     paraUserScore.textContent = `your score: ${userScore}`;
@@ -78,13 +80,16 @@ btns.forEach((button) => button.addEventListener('click', () => {
     computerScore++;
     paraComputerScore.textContent = `computer score: ${computerScore}`
   }
-  if (userScore > computerScore) {
+  if (btnsClick >= 5) {
+    if (userScore > computerScore) {
     hFinalScore.textContent = 'You won!!!'
   } else if (userScore === computerScore) {
     hFinalScore.textContent = 'a tie!!!'
   } else {
     hFinalScore.textContent = 'you lost!!!'
   } 
+  }
+  
 }));
 
 // reset button
@@ -96,7 +101,8 @@ btnReset.addEventListener('click', () => {
   userScore = 0;
   computerScore = 0;
   paraUserScore.textContent = `your score: ${userScore}`;
-  paraComputerScore.textContent = `computer score: ${computerScore}`
+  paraComputerScore.textContent = `computer score: ${computerScore}`;
+  btnsClick = 0;
   hFinalScore.textContent = 'WHO IS THE WINNER?'
 })
 
