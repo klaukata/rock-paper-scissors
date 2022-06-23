@@ -62,7 +62,8 @@ const paraComputerScore = document.getElementById('computerScore')
 
 let userScore = 0;
 let computerScore = 0;
-
+paraUserScore.textContent = `your score: ${userScore}`;
+paraComputerScore.textContent = `computer score: ${computerScore}`
 
 const btns = document.querySelectorAll('.choice');
 const hFinalScore = document.getElementById('hFinalScore');
@@ -91,3 +92,4 @@ btns.forEach((button) => button.addEventListener('click', () => {
 // how many round to win
 // block buttons when theres a winner
 // user score has different colors
+// made by berry
