@@ -63,6 +63,7 @@ const paraComputerScore = document.getElementById('computerScore')
 let userScore = 0;
 let computerScore = 0;
 
+
 const btns = document.querySelectorAll('.choice');
 const hFinalScore = document.getElementById('hFinalScore');
 
@@ -70,10 +71,11 @@ const hFinalScore = document.getElementById('hFinalScore');
 btns.forEach((button) => button.addEventListener('click', () => {
   if (hOneRoundVerdict.textContent.includes('you win')) {
     userScore++;
-    paraUserScore.textContent = `user score: ${userScore}`
+    paraUserScore.textContent = `your score: ${userScore}`;
+    
   } else if (hOneRoundVerdict.textContent.includes('you lose')) {
     computerScore++;
-    paraComputerScore.textContent = `computer score: ${userScore}`
+    paraComputerScore.textContent = `computer score: ${computerScore}`
   }
   if (userScore > computerScore) {
     hFinalScore.textContent = 'You won!!!'
@@ -85,8 +87,7 @@ btns.forEach((button) => button.addEventListener('click', () => {
 }));
 
 
-//reset button
-//change default messages
-// computer chose
+// reset button
 // how many round to win
 // block buttons when theres a winner
+// user score has different colors
