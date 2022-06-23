@@ -87,9 +87,21 @@ btns.forEach((button) => button.addEventListener('click', () => {
   } 
 }));
 
-
 // reset button
+const btnReset = document.getElementById('resetButton');
+
+btnReset.addEventListener('click', () => {
+  paraComputerArr.textContent = 'pick first to find out';
+  hOneRoundVerdict.textContent = 'who will win the first round?'
+  userScore = 0;
+  computerScore = 0;
+  paraUserScore.textContent = `your score: ${userScore}`;
+  paraComputerScore.textContent = `computer score: ${computerScore}`
+  hFinalScore.textContent = 'WHO IS THE WINNER?'
+})
+
+
+
 // how many round to win
 // block buttons when theres a winner
 // user score has different colors
-// made by berry
