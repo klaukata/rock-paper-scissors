@@ -1,10 +1,71 @@
-html {
-    max-width: 100vw;
-    max-height: 100vh;
-    
+:root {
+    --fontGray: #3C3C3C;
 }
+
+* {
+    font-family: 'Iceland', cursive;
+    color: var(--fontGray);
+    margin: 0;
+    padding: 0;
+}
+
+
 
 body {
     background: url(/img/bckgrnd.svg) no-repeat;
     background-position: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+div.emojis {
+    display: flex;
+    justify-content: center;
+    gap: 2em
+}
+img {
+    max-width: 2.5em;
+}
+h1#title {
+    margin: 1em 0 0.5em;
+}
+
+h1, h3 {
+    font-weight: 500;
+}
+h3 {
+    font-size: 1.2em;
+}
+button {
+    border: none;
+    background: none;
+}
+div#buttons {
+    display: flex;
+    gap: 1.3em;
+    justify-content: center;
+}
+button.choice {
+    color: black;
+    font-size: 1.5em;  
+}
+#pComputerArr {
+    font-size: 1.5em;
+    color: var(--fontGray);
+    opacity: 0.32;
+}
+
+.hSpace {
+    margin-top: 0.7em;
+}
+#userScore, #computerScore {
+    font-size: 1.1em;
+}
+#resetButton {
+    margin-bottom: 2em;
+    font-size: 1.05em;
 }
