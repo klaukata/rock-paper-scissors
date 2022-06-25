@@ -80,7 +80,7 @@ btns.forEach((button) => button.addEventListener('click', () => {
     computerScore++;
     paraComputerScore.textContent = `computer score: ${computerScore}`
   }
-  if (btnsClick >= 5) {
+  if (userScore >= 5 || computerScore >=5) {
     if (userScore > computerScore) {
     hFinalScore.textContent = 'You won!!!'
   } else if (userScore === computerScore) {
@@ -116,3 +116,6 @@ btnReset.addEventListener('click', () => {
 
 
 // user score has different colors
+// footer
+// animate chosen element
+// score to desplay 3
