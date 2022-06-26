@@ -87,11 +87,14 @@ btns.forEach((button) => button.addEventListener('click', () => {
   }
   if (userScore >= 5 || computerScore >=5) {
     if (userScore > computerScore) {
-    hFinalScore.textContent = 'You won!!!'
+    hFinalScore.textContent = 'YOU WON!'
+    hFinalScore.style.color = '#FFC700'
   } else if (userScore === computerScore) {
-    hFinalScore.textContent = 'a tie!!!'
+    hFinalScore.textContent = "IT'S A TIE!"
+    hFinalScore.style.color = '#ED1A68'
   } else {
-    hFinalScore.textContent = 'you lost!!!'
+    hFinalScore.textContent = 'YOU LOST!'
+    hFinalScore.style.color = '#EC401B'
   } btnRock.disabled = true;
     btnPaper.disabled = true;
     btnScissors.disabled = true;
@@ -115,6 +118,7 @@ btnReset.addEventListener('click', () => {
   paraComputerArr.style.cssText = 'color: var(--fontGray); opacity: 0.32;'
   hOneRoundVerdict.textContent = 'who will win the first round?'
   hFinalScore.textContent = 'WHO IS THE WINNER?'
+  hFinalScore.style.color = '#F09E00'
   // reverses user counting system
   userScore = 0;
   spanUser.textContent = userScore;
@@ -127,7 +131,7 @@ btnReset.addEventListener('click', () => {
 })
 
 
-// footer
-// animate chosen element
-// computer choice changes colors
-// fix font sizes
+// add footer
+// animate chosen elements
+// buttons different colors
+// game results different colors
