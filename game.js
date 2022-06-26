@@ -4,7 +4,7 @@ const btnPaper = document.getElementById('paperButton');
 const btnScissors = document.getElementById('scissorsButton');
 
 // paragraphs
-const paraComputerArr = document.getElementById('pComputerArr') // ?
+const paraComputerArr = document.getElementById('pComputerArr');
 const hOneRoundVerdict = document.getElementById('hOneRoundVerdict');
 
 const arrs = {
@@ -35,6 +35,8 @@ let onClick = function(userPick) {
     }
   }
   paraComputerArr.textContent = getObjectKeyName(computerPick);
+  paraComputerArr.style.cssText = 'opacity: 1; color: black'
+
   hOneRoundVerdict.textContent = determineWhoWonARound(userPick, computerPick);
 }
 
@@ -77,12 +79,10 @@ btns.forEach((button) => button.addEventListener('click', () => {
   btnsClick++;
   if (hOneRoundVerdict.textContent.includes('you win')) {
     userScore++;
-    if (userScore > 0) spanUser.style.color = '#11AFAB'
     spanUser.textContent = userScore;
     
   } else if (hOneRoundVerdict.textContent.includes('you lose')) {
     computerScore++;
-    if (computerScore > 0) spanComputer.style.color = '#35D464';
     spanComputer.textContent = computerScore;
   }
   if (userScore >= 5 || computerScore >=5) {
@@ -112,6 +112,7 @@ btnReset.addEventListener('click', () => {
   btnReset.disabled = true;
   // reverses texts
   paraComputerArr.textContent = 'pick first to find out';
+  paraComputerArr.style.cssText = 'color: var(--fontGray); opacity: 0.32;'
   hOneRoundVerdict.textContent = 'who will win the first round?'
   hFinalScore.textContent = 'WHO IS THE WINNER?'
   // reverses user counting system
@@ -129,4 +130,4 @@ btnReset.addEventListener('click', () => {
 // footer
 // animate chosen element
 // computer choice changes colors
-// improve ui
+// fix font sizes
