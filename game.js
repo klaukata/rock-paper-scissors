@@ -88,17 +88,21 @@ btns.forEach((button) => button.addEventListener('click', () => {
   if (userScore >= 5 || computerScore >=5) {
     if (userScore > computerScore) {
     hFinalScore.textContent = 'YOU WON!'
-    hFinalScore.style.color = '#FFC700'
+    hFinalScore.style.color = '#ED1A68'
   } else if (userScore === computerScore) {
     hFinalScore.textContent = "IT'S A TIE!"
-    hFinalScore.style.color = '#ED1A68'
+    hFinalScore.style.color = '#FFC700'
   } else {
     hFinalScore.textContent = 'YOU LOST!'
     hFinalScore.style.color = '#EC401B'
   } btnRock.disabled = true;
     btnPaper.disabled = true;
     btnScissors.disabled = true;
+    btnRock.style.opacity = '0.5';
+    btnPaper.style.opacity = '0.5';
+    btnScissors.style.opacity = '0.5';
     btnReset.disabled = false;
+    btnReset.style.opacity = '1'
   }
   
 }));
@@ -106,6 +110,7 @@ btns.forEach((button) => button.addEventListener('click', () => {
 // reset button
 const btnReset = document.getElementById('resetButton');
 btnReset.disabled = true;
+btnReset.style.opacity = '0.5'
 
 btnReset.addEventListener('click', () => {
   // disable/enable buttons
@@ -113,6 +118,10 @@ btnReset.addEventListener('click', () => {
   btnScissors.disabled = false;
   btnPaper.disabled = false;
   btnReset.disabled = true;
+  btnReset.style.opacity = '0.5'
+  btnRock.style.opacity = '1';
+  btnPaper.style.opacity = '1';
+  btnScissors.style.opacity = '1';
   // reverses texts
   paraComputerArr.textContent = 'pick first to find out';
   paraComputerArr.style.cssText = 'color: var(--fontGray); opacity: 0.32;'
@@ -122,10 +131,8 @@ btnReset.addEventListener('click', () => {
   // reverses user counting system
   userScore = 0;
   spanUser.textContent = userScore;
-  spanUser.style.color = '#3C3C3C'
   computerScore = 0;
   spanComputer.textContent = computerScore;
-  spanComputer.style.color = '#3C3C3C'
   btnsClick = 0;
   
 })
@@ -133,5 +140,3 @@ btnReset.addEventListener('click', () => {
 
 // add footer
 // animate chosen elements
-// buttons different colors
-// game results different colors
