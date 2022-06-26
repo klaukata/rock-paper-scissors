@@ -26,6 +26,7 @@ let onClick = function(userPick) {
     return (randomNum === 0) ? [1,0,0] : (randomNum === 1) ? [0,1,0] : [0,0,1];
   }
   let computerPick = convertChoiceToArr();
+  // displays computers pick (element) instead of an array
   function getObjectKeyName(arr) {
     let str = arr.join('');
     for (let i in arrs) {
@@ -33,7 +34,7 @@ let onClick = function(userPick) {
       if (objValue == str) return i
     }
   }
-  paraComputerArr.textContent = getObjectKeyName(computerPick); // ?
+  paraComputerArr.textContent = getObjectKeyName(computerPick);
   hOneRoundVerdict.textContent = determineWhoWonARound(userPick, computerPick);
 }
 
@@ -57,20 +58,18 @@ function determineWhoWonARound(usr, comp) {
   }
 }
 
-const paraUserScore = document.getElementById('userScore')
-const paraComputerScore = document.getElementById('computerScore')
-
 let userScore = 0;
 let computerScore = 0;
+
+const spanUser = document.querySelector('#spanUserScore');
+spanUser.textContent = userScore;
+
+const spanComputer = document.querySelector('#spanComputerScore');
+spanComputer.textContent = computerScore;
 
 const btns = document.querySelectorAll('.choice');
 const hFinalScore = document.getElementById('hFinalScore');
 
-
-const spanUser = document.querySelector('#spanUserScore');
-spanUser.textContent = userScore;
-const spanComputer = document.querySelector('#spanComputerScore');
-spanComputer.textContent = computerScore;
 
 //counts the score and determines if user won/lost
 let btnsClick = 0;
@@ -106,12 +105,16 @@ const btnReset = document.getElementById('resetButton');
 btnReset.disabled = true;
 
 btnReset.addEventListener('click', () => {
+  // disable/enable buttons
   btnRock.disabled = false;
   btnScissors.disabled = false;
   btnPaper.disabled = false;
   btnReset.disabled = true;
+  // reverses texts
   paraComputerArr.textContent = 'pick first to find out';
   hOneRoundVerdict.textContent = 'who will win the first round?'
+  hFinalScore.textContent = 'WHO IS THE WINNER?'
+  // reverses user counting system
   userScore = 0;
   spanUser.textContent = userScore;
   spanUser.style.color = '#3C3C3C'
@@ -119,10 +122,11 @@ btnReset.addEventListener('click', () => {
   spanComputer.textContent = computerScore;
   spanComputer.style.color = '#3C3C3C'
   btnsClick = 0;
-  hFinalScore.textContent = 'WHO IS THE WINNER?'
+  
 })
 
 
 // footer
 // animate chosen element
 // computer choice changes colors
+// improve ui
