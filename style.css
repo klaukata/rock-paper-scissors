@@ -65,6 +65,12 @@ button.choice {
 #userScore, #computerScore {
     font-size: 1.1em;
 }
+span#spanUserScore {
+    color: #11AFAB
+}
+span#spanComputerScore {
+    color: #35D464
+}
 #resetButton {
     margin-bottom: 2em;
     font-size: 1.05em;
