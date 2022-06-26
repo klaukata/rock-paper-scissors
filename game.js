@@ -62,11 +62,15 @@ const paraComputerScore = document.getElementById('computerScore')
 
 let userScore = 0;
 let computerScore = 0;
-paraUserScore.textContent = `your score: ${userScore}`;
-paraComputerScore.textContent = `computer score: ${computerScore}`
 
 const btns = document.querySelectorAll('.choice');
 const hFinalScore = document.getElementById('hFinalScore');
+
+
+const spanUser = document.querySelector('#spanUserScore');
+spanUser.textContent = userScore;
+const spanComputer = document.querySelector('#spanComputerScore');
+spanComputer.textContent = computerScore;
 
 //counts the score and determines if user won/lost
 let btnsClick = 0;
@@ -74,11 +78,13 @@ btns.forEach((button) => button.addEventListener('click', () => {
   btnsClick++;
   if (hOneRoundVerdict.textContent.includes('you win')) {
     userScore++;
-    paraUserScore.textContent = `your score: ${userScore}`;
+    if (userScore > 0) spanUser.style.color = '#11AFAB'
+    spanUser.textContent = userScore;
     
   } else if (hOneRoundVerdict.textContent.includes('you lose')) {
     computerScore++;
-    paraComputerScore.textContent = `computer score: ${computerScore}`
+    if (computerScore > 0) spanComputer.style.color = '#35D464';
+    spanComputer.textContent = computerScore;
   }
   if (userScore >= 5 || computerScore >=5) {
     if (userScore > computerScore) {
@@ -118,4 +124,3 @@ btnReset.addEventListener('click', () => {
 // user score has different colors
 // footer
 // animate chosen element
-// score to desplay 3
