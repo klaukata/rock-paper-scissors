@@ -113,14 +113,16 @@ btnReset.addEventListener('click', () => {
   paraComputerArr.textContent = 'pick first to find out';
   hOneRoundVerdict.textContent = 'who will win the first round?'
   userScore = 0;
+  spanUser.textContent = userScore;
+  spanUser.style.color = '#3C3C3C'
   computerScore = 0;
-  paraUserScore.textContent = `your score: ${userScore}`;
-  paraComputerScore.textContent = `computer score: ${computerScore}`;
+  spanComputer.textContent = computerScore;
+  spanComputer.style.color = '#3C3C3C'
   btnsClick = 0;
   hFinalScore.textContent = 'WHO IS THE WINNER?'
 })
 
 
-// user score has different colors
 // footer
 // animate chosen element
+// computer choice changes colors
