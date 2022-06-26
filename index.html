@@ -12,32 +12,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div></div>
+    <div class="emojis">
+        <img src="/img/emojis/rock_1faa8.png" alt="rock emoji">
+        <img src="/img/emojis/page-with-curl_1f4c3.png" alt="paper emoji">
+        <img src="/img/emojis/scissors_2702-fe0f.png" alt="scissors emoji">
+    </div>
 
-    <div>
-        <h1>ROCK PAPER SCISSORS</h1>
+    <div id="text" style="text-align:center;">
+        <h1 id="title">ROCK PAPER SCISSORS</h1>
         <h3>choose your weapon:</h3>
-        <div>
+        <div id="buttons">
             <button class="choice" id="rockButton">rock</button>
             <button class="choice" id="paperButton">paper</button>
             <button class="choice" id="scissorsButton">scissors</button>
         </div>
-        <h3>computer chose:</h3>
+        <h3 class="hSpace">computer chose:</h3>
             <p id="pComputerArr">pick first to find out</p>
-        <h3 id="hOneRoundVerdict">who will win the first round?</h3>
-        <p id="userScore"></p>
-        <p id="computerScore"></p>
-        <h1 id="hFinalScore">WHO IS THE WINNER?</h1>
-
-        <button id="resetButton">reset</button>
+        <h3 class="hSpace" id="hOneRoundVerdict">who will win the first round?</h3>
+        <p id="userScore">your score: <span id="spanUserScore"></span></p>
+        <p id="computerScore">computer score: <span id="spanComputerScore"></span></p>
+        <h1 class="hSpace" id="hFinalScore">WHO IS THE WINNER?</h1>
+        <button id="resetButton">play again</button>
+        
     </div>
 
-    <div></div>
 
-    <footer>
-        made with &#128153 by berry
-    </footer>
 
-    
+    <div class="emojis">
+        <img src="/img/emojis/rock_1faa8.png" alt="rock emoji">
+        <img src="/img/emojis/page-with-curl_1f4c3.png" alt="paper emoji">
+        <img src="/img/emojis/scissors_2702-fe0f.png" alt="scissors emoji">        
+    </div>
+
 </body>
 </html>
