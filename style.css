@@ -33,9 +33,14 @@ img {
 h1#title {
     margin: 1em 0 0.5em;
 }
-
+h1 {
+    font-size: 2em;
+}
 h1, h3 {
     font-weight: 500;
+}
+h3#hOneRoundVerdict {
+    font-size: 1.3em;
 }
 h3 {
     font-size: 1.2em;
@@ -71,7 +76,15 @@ span#spanUserScore {
 span#spanComputerScore {
     color: #35D464
 }
+h1#hFinalScore {
+    color: #F09E00;
+}
 #resetButton {
     margin-bottom: 2em;
     font-size: 1.05em;
+}
+
+/* js */
+.imgChosenElement {
+    max-width: 200%;
 }
