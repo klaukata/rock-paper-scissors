@@ -104,7 +104,10 @@ btns.forEach((button) => button.addEventListener('click', () => {
     btnReset.disabled = false;
     btnReset.style.opacity = '1'
   }
-  
+  // imgs get bigger when chosen
+  let buttonsId = button.getAttribute('id');
+  let img = document.querySelector(`img#${buttonsId}`);
+  img.classList.toggle('imgChosenElement');
 }));
 
 // reset button
