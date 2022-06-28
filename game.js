@@ -1,7 +1,7 @@
 // buttons
-const btnRock = document.getElementById('rockButton');
-const btnPaper = document.getElementById('paperButton');
-const btnScissors = document.getElementById('scissorsButton');
+const btnRock = document.querySelector('button#rockButton');
+const btnPaper = document.querySelector('button#paperButton');
+const btnScissors = document.querySelector('button#scissorsButton');
 
 // paragraphs
 const paraComputerArr = document.getElementById('pComputerArr');
@@ -105,9 +105,9 @@ btns.forEach((button) => button.addEventListener('click', () => {
     btnReset.style.opacity = '1'
   }
   // imgs get bigger when chosen
-  let buttonsId = button.getAttribute('id');
-  let img = document.querySelector(`img#${buttonsId}`);
-  img.classList.toggle('imgChosenElement');
+  // let buttonsId = button.getAttribute('id');
+  // let img = document.querySelector(`img#${buttonsId}`);
+  // img.classList.toggle('imgChosenElement');
 }));
 
 // reset button
