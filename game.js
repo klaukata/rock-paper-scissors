@@ -36,8 +36,9 @@ let onClick = function(userPick) {
   }
   paraComputerArr.textContent = getObjectKeyName(computerPick);
   paraComputerArr.style.cssText = 'opacity: 1; color: black'
-
   hOneRoundVerdict.textContent = determineWhoWonARound(userPick, computerPick);
+
+
 }
 
 const obj = {
@@ -107,9 +108,11 @@ btns.forEach((button) => button.addEventListener('click', () => {
     btnReset.disabled = false;
     btnReset.style.opacity = '1'
   }
-  // let buttonsId = button.getAttribute('id');
-  // let img = document.querySelector(`img#${buttonsId}`);
-  // img.classList.toggle('imgChosenElement');
+  // makes img of a chosen element bigger
+  let buttonsId = button.getAttribute('id');
+  let img = document.querySelector(`img#${buttonsId}`);
+  img.classList.toggle('imgChosenElement');
+  console.log(img) // ???
 }));
 
 // reset button
