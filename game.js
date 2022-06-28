@@ -76,6 +76,7 @@ const hFinalScore = document.getElementById('hFinalScore');
 //counts the score and determines if user won/lost
 let btnsClick = 0;
 btns.forEach((button) => button.addEventListener('click', () => {
+  // counts a score
   btnsClick++;
   if (hOneRoundVerdict.textContent.includes('you win')) {
     userScore++;
@@ -85,6 +86,7 @@ btns.forEach((button) => button.addEventListener('click', () => {
     computerScore++;
     spanComputer.textContent = computerScore;
   }
+  // give a message about who lost/won
   if (userScore >= 5 || computerScore >=5) {
     if (userScore > computerScore) {
     hFinalScore.textContent = 'YOU WON!'
@@ -95,7 +97,8 @@ btns.forEach((button) => button.addEventListener('click', () => {
   } else {
     hFinalScore.textContent = 'YOU LOST!'
     hFinalScore.style.color = '#EC401B'
-  } btnRock.disabled = true;
+  } //disable certain buttons once the winner is announced
+    btnRock.disabled = true;
     btnPaper.disabled = true;
     btnScissors.disabled = true;
     btnRock.style.opacity = '0.5';
@@ -104,7 +107,6 @@ btns.forEach((button) => button.addEventListener('click', () => {
     btnReset.disabled = false;
     btnReset.style.opacity = '1'
   }
-  // imgs get bigger when chosen
   // let buttonsId = button.getAttribute('id');
   // let img = document.querySelector(`img#${buttonsId}`);
   // img.classList.toggle('imgChosenElement');
@@ -140,6 +142,6 @@ btnReset.addEventListener('click', () => {
   
 })
 
-
+// imgs get bigger when chosen
 // add footer
 // animate chosen elements
