@@ -103,6 +103,11 @@ h1#hFinalScore {
     font-size: 1.05em;
 }
 
+.emojis-bottom {
+    position: absolute;
+    bottom: 13vh
+}
+
 /* js */
 .imgChosenElement {
     max-width: 3em;
