@@ -111,8 +111,11 @@ btns.forEach((button) => button.addEventListener('click', () => {
   // makes img of a chosen element bigger
   let buttonsId = button.getAttribute('id');
   let img = document.querySelector(`img#${buttonsId}`);
-  img.classList.toggle('imgChosenElement');
-  console.log(img) // ???
+  document.querySelector('img#rockButton').classList.remove('imgChosenElement')
+  document.querySelector('img#paperButton').classList.remove('imgChosenElement')
+  document.querySelector('img#scissorsButton').classList.remove('imgChosenElement')
+  img.classList.add('imgChosenElement');
+
 }));
 
 // reset button
