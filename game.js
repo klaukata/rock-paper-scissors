@@ -25,7 +25,7 @@ let onClick = function(userPick) {
     let randomNum = Math.floor(Math.random() * 3);
     return (randomNum === 0) ? [1,0,0] : (randomNum === 1) ? [0,1,0] : [0,0,1];
   }
-  let computerPick = convertChoiceToArr();
+  let computerPickArr = convertChoiceToArr();
   // displays computers pick (element) instead of an array
   function getObjectKeyName(arr) {
     let str = arr.join('');
@@ -34,9 +34,17 @@ let onClick = function(userPick) {
       if (objValue == str) return i
     }
   }
-  paraComputerArr.textContent = getObjectKeyName(computerPick);
-  paraComputerArr.style.cssText = 'opacity: 1; color: black'
-  hOneRoundVerdict.textContent = determineWhoWonARound(userPick, computerPick);
+  let computerPick = getObjectKeyName(computerPickArr)
+  paraComputerArr.textContent = computerPick;
+  paraComputerArr.style.cssText = 'opacity: 1; color: black';
+
+  let img = document.querySelector(`img#${computerPick}`);
+  document.querySelector('img#rock').classList.remove('imgChosenElement');
+  document.querySelector('img#paper').classList.remove('imgChosenElement');
+  document.querySelector('img#scissors').classList.remove('imgChosenElement');
+  img.classList.add('imgChosenElement');
+  // display verdict
+  hOneRoundVerdict.textContent = determineWhoWonARound(userPick, computerPickArr);
 
 
 }
@@ -111,9 +119,9 @@ btns.forEach((button) => button.addEventListener('click', () => {
   // makes img of a chosen element bigger
   let buttonsId = button.getAttribute('id');
   let img = document.querySelector(`img#${buttonsId}`);
-  document.querySelector('img#rockButton').classList.remove('imgChosenElement')
-  document.querySelector('img#paperButton').classList.remove('imgChosenElement')
-  document.querySelector('img#scissorsButton').classList.remove('imgChosenElement')
+  document.querySelector('img#rockButton').classList.remove('imgChosenElement');
+  document.querySelector('img#paperButton').classList.remove('imgChosenElement');
+  document.querySelector('img#scissorsButton').classList.remove('imgChosenElement');
   img.classList.add('imgChosenElement');
 
 }));
@@ -145,9 +153,11 @@ btnReset.addEventListener('click', () => {
   computerScore = 0;
   spanComputer.textContent = computerScore;
   btnsClick = 0;
-  
+  // reverse img size 
+  document.querySelector('img#rockButton').classList.remove('imgChosenElement');
+  document.querySelector('img#paperButton').classList.remove('imgChosenElement');
+  document.querySelector('img#scissorsButton').classList.remove('imgChosenElement');
+  document.querySelector('img#rock').classList.remove('imgChosenElement');
+  document.querySelector('img#paper').classList.remove('imgChosenElement');
+  document.querySelector('img#scissors').classList.remove('imgChosenElement');
 })
-
-// imgs get bigger when chosen
-// add footer
-// animate chosen elements
