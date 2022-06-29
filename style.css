@@ -9,27 +9,48 @@
     padding: 0;
 }
 
-
-
 body {
     background: url(/img/bckgrnd.svg) no-repeat;
     background-position: top center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     max-width: 100vw;
     height: 100vh;
 }
 
-div.emojis {
+.emojis {
+    display: table;
+    width: 100%;
+    position: relative;
+  }
+  
+  .emoji {
+    width: 100vw; 
+    display: table-cell;
+    text-align: center;
+
+  
+  }
+  
+  .emoji > img {
+    display: inline-block;
+ 
+    
+  }
+  
+  img {
+    max-width: 3em;
+    transition: 0.3s
+  }
+  
+  
+  div#buttons {
     display: flex;
-    justify-content: center;
-    gap: 2em
-}
-img {
-    max-width: 2.5em;
-}
+    justify-content: space-between;
+  }
+
+
 h1#title {
     margin: 1em 0 0.5em;
 }
@@ -86,5 +107,5 @@ h1#hFinalScore {
 
 /* js */
 .imgChosenElement {
-    max-width: 200%;
+    max-width: 4em;
 }
