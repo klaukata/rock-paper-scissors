@@ -108,6 +108,19 @@ h1#hFinalScore {
     bottom: 13vh
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--fontGray);
+    opacity: 0.9;
+}
+a {
+    color: #B056F5;
+    font-weight: 600;
+    text-decoration: none;
+}
 /* js */
 .imgChosenElement {
     max-width: 3em;
