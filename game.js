@@ -129,7 +129,7 @@ btns.forEach((button) => button.addEventListener('click', () => {
 // reset button
 const btnReset = document.getElementById('resetButton');
 btnReset.disabled = true;
-btnReset.style.opacity = '0.5'
+btnReset.style.opacity = '0.4'
 
 btnReset.addEventListener('click', () => {
   // disable/enable buttons
