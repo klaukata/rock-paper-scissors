@@ -24,31 +24,28 @@ body {
     display: table;
     width: 100%;
     position: absolute;
-    top: 13vh;
-  }
-  
-  .emoji {
+    top: 7em;
+}
+
+.emoji {
     width: 100vw; 
     display: table-cell;
     text-align: center;
-  }
-  
-  .emoji > img {
+}
+
+.emoji > img {
     display: inline-block;
-  }
-  
-  img {
+}
+
+img {
     max-width: 2em;
     transition: 0.3s
-  }
-  
-  
-  div#buttons {
+}
+
+div#buttons {
     display: flex;
     justify-content: space-between;
-  }
-
-
+}
 h1#title {
     margin: 1em 0 0.5em;
 }
@@ -80,9 +77,8 @@ button.choice {
 #pComputerArr {
     font-size: 1.5em;
     color: var(--fontGray);
-    opacity: 0.32;
+    opacity: 0.5;
 }
-
 .hSpace {
     margin-top: 0.7em;
 }
@@ -105,7 +101,7 @@ h1#hFinalScore {
 
 .emojis-bottom {
     position: absolute;
-    bottom: 13vh
+    bottom: 7em
 }
 
 footer {
@@ -125,3 +121,4 @@ a {
 .imgChosenElement {
     max-width: 3em;
 }
+
