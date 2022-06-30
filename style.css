@@ -173,3 +173,39 @@ a {
         font-size: 1.2em;
     }
 }
+@media (min-width: 750px) {
+    img {
+        max-width: 3.5em;
+    }
+    .imgChosenElement {
+        max-width: 4.5em;
+    }
+    body {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .emoji {
+        width: auto;
+        display: block;
+    }
+    .emojis-top, .emojis-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+        width: auto;
+        position: absolute;
+        transform: none;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+    }
+    .emojis-top {
+        left: 3em;
+    }
+    .emojis-bottom {
+        right: 3em;
+    }
+
+}
