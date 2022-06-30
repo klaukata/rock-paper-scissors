@@ -207,5 +207,36 @@ a {
     .emojis-bottom {
         right: 3em;
     }
-
+}
+@media (min-width: 900px) {
+    img {
+        max-width: 4em;
+    }
+    .imgChosenElement {
+        max-width: 5em;
+    }
+    .emojis-top {
+        left: 5em;
+    }
+    .emojis-bottom {
+        right: 5em;
+    }    
+    h1 {
+        font-size: 2.7em;
+    }
+    h3 {
+        font-size: 1.9em;
+    }
+    button.choice,#pComputerArr, h3#hOneRoundVerdict {
+        font-size: 2.2em
+    }
+    #userScore, #computerScore {
+        font-size: 1.8em;
+    }
+    #resetButton {
+        font-size: 1.7em;
+    }
+    footer {
+        font-size: 1.5em;
+    }
 }
