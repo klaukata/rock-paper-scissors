@@ -101,7 +101,8 @@ h1#hFinalScore {
 
 .emojis-bottom {
     position: absolute;
-    bottom: 7em
+    width: 100%;
+    bottom: 7em;
 }
 
 footer {
@@ -129,4 +130,18 @@ a {
     .emojis-bottom {
         bottom: 10em;
     }
+}
+@media (min-width: 450px) {
+    img {
+        max-width: 2.5em;
+    }
+    .imgChosenElement {
+        max-width: 3.5em;
+    }
+    .emojis-top, .emojis-bottom {
+        width: 80vw;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 }
