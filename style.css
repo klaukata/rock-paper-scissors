@@ -145,5 +145,31 @@ a {
     }
 }
 @media (min-width: 570px) {
-
+    img {
+        max-width: 2.8em;
+    }
+    .imgChosenElement {
+        max-width: 3.8em;
+    }
+    .emojis-bottom {
+        bottom: 7em;
+    }
+    h1 {
+        font-size: 2.3em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    button.choice,#pComputerArr, h3#hOneRoundVerdict {
+        font-size: 1.8em
+    }
+    #userScore, #computerScore {
+        font-size: 1.4em;
+    }
+    #resetButton {
+        font-size: 1.3em;
+    }
+    footer {
+        font-size: 1.2em;
+    }
 }
