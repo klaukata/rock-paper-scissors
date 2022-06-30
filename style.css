@@ -122,3 +122,11 @@ a {
     max-width: 3em;
 }
 
+@media (min-height: 750px) {
+    .emojis-top {
+        top: 10em;
+    }
+    .emojis-bottom {
+        bottom: 10em;
+    }
+}
