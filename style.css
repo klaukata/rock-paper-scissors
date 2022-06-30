@@ -128,7 +128,7 @@ a {
         top: 10em;
     }
     .emojis-bottom {
-        bottom: 10em;
+        bottom: 8em;
     }
 }
 @media (min-width: 450px) {
@@ -143,5 +143,7 @@ a {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+}
+@media (min-width: 570px) {
 
 }
