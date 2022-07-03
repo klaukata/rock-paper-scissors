@@ -222,3 +222,31 @@ a {
         right: 6em;
     }
 }
+@media (min-width: 1100px) {
+    .emojis-top {
+        left: 9em;
+    }
+    .emojis-bottom {
+        right: 9em;
+    }
+}
+@media (min-width: 1300px) {
+    .emojis-top {
+        left: 13em;
+    }
+    .emojis-bottom {
+        right: 13em;
+    }
+}
+@media (min-width: 1550px) {
+    body {
+        background: url(/img/desktop-bigger.svg) no-repeat;
+        background-position: center;
+    }
+    .emojis-top {
+        left: 16em;
+    }
+    .emojis-bottom {
+        right: 16em;
+    }
+}
