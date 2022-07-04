@@ -14,9 +14,18 @@ const arrs = {
 }
 
 // individual event listeners
-btnRock.addEventListener('click', () => {onClick(arrs.rock)});
-btnPaper.addEventListener('click', () => {onClick(arrs.paper)});
-btnScissors.addEventListener('click', () => {onClick(arrs.scissors)});
+btnRock.addEventListener('click', () => {
+  onClick(arrs.rock); 
+  btnRock.classList.add('pickedElement')
+});
+btnPaper.addEventListener('click', () => {
+  onClick(arrs.paper);
+  btnPaper.classList.add('pickedElement')
+});
+btnScissors.addEventListener('click', () => {
+  onClick(arrs.scissors);
+  btnScissors.classList.add('pickedElement')
+});
 
 // executes when a user clicks a button
 let onClick = function(userPick) {
@@ -37,7 +46,12 @@ let onClick = function(userPick) {
   let computerPick = getObjectKeyName(computerPickArr)
   paraComputerArr.textContent = computerPick;
   paraComputerArr.style.cssText = 'opacity: 1; color: black';
+  // underline a chosen object
+  btnRock.classList.remove('pickedElement');
+  btnPaper.classList.remove('pickedElement');
+  btnScissors.classList.remove('pickedElement');
 
+  // make a certain img bigger
   let img = document.querySelector(`img#${computerPick}`);
   document.querySelector('img#rock').classList.remove('imgChosenElement');
   document.querySelector('img#paper').classList.remove('imgChosenElement');
