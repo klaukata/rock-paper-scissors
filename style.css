@@ -10,7 +10,7 @@
 }
 
 body {
-    background: url(/img/bckgrnd.svg) no-repeat;
+    background: url(img/bckgrnd.svg) no-repeat;
     background-position: top center;
     display: flex;
     flex-direction: column;
@@ -245,7 +245,7 @@ a {
 }
 @media (min-width: 1550px) {
     body {
-        background: url(/img/desktop-bigger.svg) no-repeat;
+        background: url(img/desktop-bigger.svg) no-repeat;
         background-position: center;
     }
     .emojis-top {
