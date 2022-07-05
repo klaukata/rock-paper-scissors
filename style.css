@@ -255,3 +255,12 @@ a {
         right: 16em;
     }
 }
+
+@media (min-width: 2200px) {
+    .emojis-top {
+        left: 35em;
+    }
+    .emojis-bottom {
+        right: 35em;
+    }
+}
